@@ -1,37 +1,11 @@
-<h1>Heros <small> from Marvel & DC
-</small> </h1>
+<h1>Héroes <small>Marvel y DC</small></h1>
 <hr>
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="assets\img\aquaman.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">acuaman</h5>
-        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus, tenetur. Sequi, ut ipsam porro aliquam inventore quibusdam alias? In, consequuntur a enim recusandae voluptatibus magni laboriosam nostrum expedita rem ut.</p>
-      </div>
-      <button class="btn btn-outline-primary btn-block"> Ver mas...</button> 
-    </div>
-  </div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 ">
+
+<!-- *ngFor="let heroe of heroes; let i = index" -->
+  <app-hero-card  [hero]="foo" [index]="i"  *ngFor="let foo of heros; let i = index"></app-hero-card>
+
 
 </div>
-
-  

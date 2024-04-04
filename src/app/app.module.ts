@@ -6,13 +6,17 @@ import {AppRoutingModule} from './app.routes';
 
 
 //services
-
+import { herosService } from './component/services/heros.service';
 //component
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './component/shared/navbar/navbar.component';
 import { HomeComponent } from './component/home/home.component';
 import { AboutComponent } from './component/about/about.component';
 import { HerosComponent } from './component/heros/heros.component';
+import { HeroComponent } from './component/hero/hero.component';
+import { FormsModule } from '@angular/forms';
+import { SearchdisplayComponent } from './component/searchdisplay/searchdisplay.component';
+import { HeroCardComponent } from './component/hero-card/hero-card.component';
 
 @NgModule({
   declarations: [
@@ -21,15 +25,21 @@ import { HerosComponent } from './component/heros/heros.component';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    HerosComponent
+    HerosComponent,
+    HeroComponent,
+    SearchdisplayComponent,
+    HeroCardComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    herosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

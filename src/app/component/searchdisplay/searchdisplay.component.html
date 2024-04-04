@@ -1,0 +1,25 @@
+<h1>Looking 4: <small> 
+  {{textToSearch}}
+</small> </h1>
+<hr>
+<div class="row animated fadeIn fast" *ngIf="heros.length==0">
+  <div class="col-md-12">
+  <div class="alert alert-info" role="alert">
+  No existe un resultado con: {{textToSearch}}
+  </div>
+  </div>
+  
+  </div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+
+  <app-hero-card [hero]="hero" [index]="i" *ngFor="let hero of heros; let i = index">
+
+  </app-hero-card>
+ 
+  
+ 
+  
+  
+</div>
