@@ -13,7 +13,7 @@ constructor(private router: Router){
  @Input() index!: number; 
 
  showHero(){
-   console.log(this.index);
+   
    this.router.navigate(["/hero",this.index]);
  }
 

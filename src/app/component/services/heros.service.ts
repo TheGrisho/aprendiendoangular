@@ -69,9 +69,11 @@ export class herosService{
       searchHero(textToSearch:string){
         let herosArr:hero[]=[];
         textToSearch= textToSearch.toLowerCase();
-        for(let hero of this.heros){
+        for(let i=0; i<this.heros.length; i++){
+          let hero = this.heros[i];
           let nombre = hero.nombre.toLowerCase();
           if(nombre.indexOf(textToSearch)>=0 ){
+            hero.idx=i;
               herosArr.push(hero)
           }
         }
@@ -86,4 +88,5 @@ export class herosService{
           img: string;
           aparicion: string;
           casa: string;
+          idx?:number;
     }
